@@ -1,0 +1,12 @@
+services:
+  frontend:
+    image: dstensnes/asterisk:latest
+    volumes:
+      - conf:/etc/asterisk
+
+volumes:
+  conf:
+    driver: local
+    driver_opts:
+      type: bind
+      device: ${CONF_PATH}
