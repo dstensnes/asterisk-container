@@ -8,5 +8,7 @@ volumes:
   conf:
     driver: local
     driver_opts:
-      type: bind
+      type: None
+      o: bind
       device: ${CONF_PATH}
+
